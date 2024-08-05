@@ -39,7 +39,26 @@
                                     if (isset($_POST['login'])) {
                                         $data = $db->getAdmin($_POST['Username'], md5($_POST['Password']));
                                         if ($data->num_rows > 0) {
+                                            $admin = $data->fetch_assoc();
+
                                             $_SESSION['Username'] = $_POST['Username'];
+                                            $_SESSION['UserName'] = $admin['name']; // Simpan nama admin
+
+                                            $_SESSION['status'] = true;
+                                            header('location:admin/dashboard.php');
+                                        } else {
+                                            echo '<div class="alert alert-danger" role="alert">
+                                            Username atau Password salah!
+                                          </div>';
+                                        }
+
+                                        $dataUser = $db->getUser($_POST['Username'], md5($_POST['Password']));
+                                        if ($dataUser->num_rows > 0) {
+                                            $user = $dataUser->fetch_assoc();
+
+                                            $_SESSION['Username'] = $_POST['Username'];
+                                            $_SESSION['UserName'] = $user['name']; // Simpan nama admin
+
                                             $_SESSION['status'] = true;
                                             header('location:admin/dashboard.php');
                                         } else {

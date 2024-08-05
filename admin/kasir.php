@@ -8,12 +8,12 @@ include "../templates/topbar.php";
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Data Kasir</h1>
+    <h1 class="h3 mb-2 text-gray-800">Data Siswa</h1>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
-            <h6 class="m-0 font-weight-bold text-primary">Daftar Data Kasir</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Daftar Data Siswa</h6>
             <a href="tambah_kasir.php" class="btn btn-primary btn-sm">Tambah Data</a>
         </div>
         <div class="card-body">
@@ -21,12 +21,13 @@ include "../templates/topbar.php";
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr align="center">
-                            <th>ID Kasir</th>
-                            <th>Username</th>
-                            <th>Nama</th>
+                            <th>NIS</th>
+                            <th>Nama Siswa</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Tempat Lahir</th>
                             <th>Alamat</th>
                             <th>Nomor HP</th>
-                            <th>Nomor KTP</th>
+                            <th>Nama Wali</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>

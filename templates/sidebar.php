@@ -8,7 +8,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-                <div class="sidebar-brand-text mx-3">Aplikasi Kasir</div>
+                <div class="sidebar-brand-text mx-3">Aplikasi Sekolah</div>
             </a>
 
             <!-- Divider -->
@@ -37,13 +37,25 @@
             <li class="nav-item <?= (in_array($sidebar_active, ['kasir.php', 'edit_kasir.php', 'tambah_kasir.php'])) ? 'active' : ''; ?>">
                 <a class="nav-link" href="kasir.php">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Data Kasir</span></a>
+                    <span>Data Siswa</span></a>
             </li>
 
             <li class="nav-item <?= (in_array($sidebar_active, ['barang.php', 'edit_barang.php', 'tambah_barang.php'])) ? 'active' : ''; ?>">
                 <a class="nav-link" href="barang.php">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Data Barang</span></a>
+                    <span>Data Guru</span></a>
+            </li>
+
+            <li class="nav-item <?= (in_array($sidebar_active, ['barang.php', 'edit_barang.php', 'tambah_barang.php'])) ? 'active' : ''; ?>">
+                <a class="nav-link" href="barang.php">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Data Nilai</span></a>
+            </li>
+
+            <li class="nav-item <?= (in_array($sidebar_active, ['barang.php', 'edit_barang.php', 'tambah_barang.php'])) ? 'active' : ''; ?>">
+                <a class="nav-link" href="barang.php">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Data Absen</span></a>
             </li>
 
             <!-- Divider -->
