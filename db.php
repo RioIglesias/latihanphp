@@ -12,6 +12,10 @@ class db
     {
         return $this->koneksi->query("SELECT * FROM kasir WHERE Username = '$Username' AND password = '$password'");
     }
+    function getAdmin($Username, $password)
+    {
+        return $this->koneksi->query("SELECT * FROM admin WHERE Username = '$Username' AND password = '$password'");
+    }
 
     function getIdKasir($ID_Kasir)
     {
@@ -60,6 +64,11 @@ class db
     function tambahKasir($ID_Kasir, $Username, $Password, $NamaKasir, $Alamat, $NomorHP, $NomorKTP)
     {
         return $this->koneksi->query("INSERT INTO kasir (ID_Kasir, Username, Password, NamaKasir, Alamat, NomorHP, NomorKTP) VALUES ('$ID_Kasir', '$Username', '$Password', '$NamaKasir', '$Alamat', '$NomorHP', '$NomorKTP')");
+    }
+
+    function tambahAdmin($Username, $Password, $Nama)
+    {
+        return $this->koneksi->query("INSERT INTO admin (username, password, name) VALUES ( '$Username', '$Password', '$Nama')");
     }
 
     function tambahBarang($ID_Barang, $NamaBarang, $Satuan, $HargaSatuan)

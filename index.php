@@ -37,7 +37,7 @@
                                     session_start();
                                     $db = new db;
                                     if (isset($_POST['login'])) {
-                                        $data = $db->getUser($_POST['Username'], $_POST['Password']);
+                                        $data = $db->getAdmin($_POST['Username'], md5($_POST['Password']));
                                         if ($data->num_rows > 0) {
                                             $_SESSION['Username'] = $_POST['Username'];
                                             $_SESSION['status'] = true;
